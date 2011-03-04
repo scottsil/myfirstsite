@@ -1,0 +1,14 @@
+<table>
+  <% @tweets.each do |tweet| %>
+  <tr>
+    <td>
+      <%= tweet.created_at %>
+    </td>
+    <td>
+      <%= tweet.text %>
+    </td>
+  </tr>
+  <% end %>
+
+
+</table>
