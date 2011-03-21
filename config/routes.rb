@@ -1,6 +1,7 @@
 Myfirstsite::Application.routes.draw do
-  get "/hi/:name" => "welcome#index"
+  get "/hi/:name", :controller => "welcome", :action => "index"
   get "/tweets/:handle" => "twitter#index"
+  root :controller => "welcome", :action => "index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
