@@ -1,0 +1,54 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Corben:bold' rel='stylesheet' type='text/css'>
+	<title>Scott's First Site</title>
+	<style type="text/css">
+		body {
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFCC));
+			font-family: sans-serif;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 10px 10px 10px 10px;
+			border: 1px dotted gray;
+		}
+		#title {
+			font-family: 'Corben', arial, serif;
+			background-color: #FFFFCC;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="title">
+		<center>
+			<h1>Scott's First Site</h1>
+			<h3>A display of 's 20 most recent Tweets!</h3>
+		</center>
+	</div>
+	<br>
+	<table>
+	  <tr>
+	    <td>
+	     <b>Date</b>
+	    </td>
+	    <td>
+	      <b>Tweet</b>
+	    </td>
+	    <td>
+		  <b>Retweets</b>
+		</td>
+	  </tr>
+	 <% @tweets.each do |tweet| %>
+	  <tr>
+	    <td>
+	      <%= tweet.created_at %>
+	    </td>
+	    <td>
+	      <%= tweet.text %>
+	    </td>
+	    <td>
+		  <%= tweet.retweet_count %>
+		</td>
+	  </tr>
+	  <% end %>
+	</table>
+</body>
